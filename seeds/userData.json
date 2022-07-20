@@ -1,0 +1,21 @@
+[
+    {
+      "url": "https://res.cloudinary.com/cdeng1999/image/upload/v1657791136/dtqji1nhlxylvtrckxex.jpg",
+      "name": "Bob",
+      "email": "bob@bob.com",
+      "password": "password123"
+    },
+    {
+      "url": "https://res.cloudinary.com/cdeng1999/image/upload/v1657791136/dtqji1nhlxylvtrckxex.jpg",
+      "name": "Jon",
+      "email": "jon@jon.com",
+      "password": "password123"
+    },
+    {
+      "url": "https://res.cloudinary.com/cdeng1999/image/upload/v1657791136/dtqji1nhlxylvtrckxex.jpg",
+      "name": "Moist",
+      "email": "moist@moist.com",
+      "password": "password123"
+    }
+]
+  

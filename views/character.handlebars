@@ -1,0 +1,74 @@
+  <div class="text-center">
+    <h2>Welcome {{name}} <img src = "{{url}}" class = "pic"></h2>
+  <div class = "row justify-content-center">
+    <button type = "button" class="btn btn-primary col-2 mx-4" id= "initial" >Create Character</button>
+    <button type = "button" class="btn btn-primary col-2 mx-4" id= "start" >Start Game</button>
+    <button type = "button" class="btn btn-primary col-2 mx-4" id= "info" >More Info</button>
+  </div>
+  </div>
+
+  <div class = "row space justify-content-around"> 
+  {{#each characters as |character|}}
+    <div class = "col-2 text-center charCard">
+      <p class= "font-weight-bold">Name: {{char_name}}</p>
+      <p class= "font-weight-bold ">Class: {{char_class}}</p>
+      <p class = "yellow ">Health: {{char_health}}</p>
+      <p class = "text-info">Attack: {{char_attack}}</p>
+      <p class = "text-danger ">Strength: {{char_str}}</p>
+      <p class = "text-success ">Dexterity: {{char_dex}}</p>
+      <p class = "text-primary ">Intelligence: {{char_int}}</p>
+      <p class = "text-secondary ">Luck: {{char_luk}}</p>
+      <span><button class="btn btn-danger deleteBtn" data-id="{{id}}">DELETE</button></span>
+    </div>
+  {{/each}}
+  </div>
+  
+  
+  <div id = "myModal" class="modal text-center">
+    <div class="modal-content charCreate">
+      <span class="ml-5 close-button" id ="close">&times;</span>
+      <div id = "charCard">
+        <div class="modal-body">
+          <h1>Please Name Your Character</h1>
+          <input type = "text" placeholder="Name" id = "charName"></input>
+          <br>
+          <select name = "charClass" id = "charClass">
+            <option value = "Warrior">Warrior</option> 
+            <option value = "Hunter">Hunter</option> 
+            <option value = "Mage">Mage</option> 
+            <option value = "Thief">Thief</option> 
+          </select>
+          <br>
+          <div class = "container">
+            <h4 class="yellow">Health: <span id="health"></span></h4>
+            <h4 class="text-info">Attack: <span id="attack"></span></h4>
+            <h4 class="text-danger">Str: <span id="str"></span></h4>
+            <h4 class="text-success">Dex: <span id="dex"></span></h4>
+            <h4 class="text-primary">Int: <span id="int"></span></h4>
+            <h4 class="text-secondary">Luk: <span id="luk"></span></h4>
+            
+            <button type = "button" class="btn btn-primary" id= "dice" >Randomize Stats</button>
+            <button type = "button" class="btn btn-primary hidden" id= "confirm" >Confirm</button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id = "myModal1" class="modal text-center" >
+    <div class="modal-content charCreate">
+      <span class="close-button1" id="close1">&times;</span>
+      <h1 class="text-danger">Warrior = 2x Str</h1>
+      <h1 class="text-success">Hunter = 2x Dex</h1>
+      <h1 class="text-primary">Mage = 2x Int</h1>
+      <h1 class="text-secondary">Thief = 2x Luk</h1>
+      <h1 class="text-danger">Attack for Warriros = Str</h1>
+      <h1 class="text-success">Attack for Hunter = Dex</h1>
+      <h1 class="text-primary">Attack for Mage = Int</h1>
+      <h1 class="text-secondary">Attack for Thief = Luk</h1>
+    </div>
+  </div>
+  
+
+  
+<script src="/js/character.js"></script>
