@@ -3,11 +3,12 @@ const { Character } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 router.post('/', withAuth, async (req, res) => {
-  const { characterCard } = req.body
-  console.log(req.body);
+  // const { characterCard } = req.body
+  // console.log(req.body);
   try {
     const newChar = await Character.create({
-      ...characterCard,
+      // ...characterCard,
+      ...req.body,
       user_id: req.session.user_id,
     });
 
