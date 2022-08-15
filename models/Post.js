@@ -15,42 +15,10 @@ Post.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    contents: {
+    body: {
       type: DataTypes.STRING,
-      allowNull: false,
     },
-    // char_health: {
-    //   type: DataTypes.STRING,
-    //   allowNull: false,
-    // },
-  //   char_attack: {
-  //     type: DataTypes.STRING,
-  //     allowNull: false,
-  //   },
-  //   char_str: {
-  //       type: DataTypes.STRING,
-  //   },
-  //   char_dex: {
-  //       type: DataTypes.STRING,
-  //   },
-  //   char_int: {
-  //       type: DataTypes.STRING,
-  //  },
-  //   char_luk: {
-  //       type: DataTypes.STRING,
-  //   },
-  //   char_gold: {
-  //       type: DataTypes.INTEGER,
-        
-  //   },
-  //   char_level: {
-  //       type: DataTypes.INTEGER,
-        
-  //   },
-  //   char_has_excalibur: {
-  //       type: DataTypes.STRING,
-        
-  //   },
+
     user_id: {
       type: DataTypes.INTEGER,
       references: {
